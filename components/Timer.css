@@ -1,0 +1,165 @@
+.timer-container {
+    background-color: #f0e6ff; /* Soft lavender background */
+    font-family: 'Cursive', sans-serif;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    max-width: 450px;
+    margin: 30px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .timer-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .timer-container h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #4a4a4a;
+  }
+  
+  .task-selector {
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .task-selector label {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  .task-selector select {
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #9a8cd8;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 250px;
+    background-color: #fff;
+    color: #4a4a4a;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .task-selector select:focus {
+    border-color: #4a4a4a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .task-selector select:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+  }
+  
+  .timer-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 24px;
+    gap: 10px;
+  }
+  
+  .timer-display input {
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    font-size: 22px;
+    border: 2px solid #9a8cd8;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #4a4a4a;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .timer-display input:focus {
+    border-color: #4a4a4a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .timer-display input:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+  }
+  
+  .timer-display span {
+    font-size: 28px;
+    color: #4a4a4a;
+  }
+  
+  .timer-controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .timer-controls button {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .timer-controls button:hover {
+    transform: translateY(-3px);
+  }
+  
+  .timer-controls button:active {
+    transform: translateY(0);
+  }
+  
+  .timer-controls button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+  /* Start/Pause Button */
+  .timer-controls button:nth-child(1) {
+    background-color: #00796b; /* Teal */
+    color: #fff;
+  }
+  
+  .timer-controls button:nth-child(1):hover {
+    background-color: #004d40; /* Darker teal */
+  }
+  
+  /* Reset Button */
+  .timer-controls button:nth-child(2) {
+    background-color: #d32f2f; /* Red */
+    color: #fff;
+  }
+  
+  .timer-controls button:nth-child(2):hover {
+    background-color: #b71c1c; /* Darker red */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .timer-container {
+      padding: 20px;
+    }
+  
+    .timer-display input {
+      width: 60px;
+      height: 45px;
+      font-size: 20px;
+    }
+  
+    .timer-controls button {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  }
+  

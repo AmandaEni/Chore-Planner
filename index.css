@@ -1,0 +1,205 @@
+/* index.css - Global reset and enhanced styles for the Smart Chore Planner */
+
+/* CSS Reset to normalize default browser styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Reset images for responsive behavior */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove default link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Global body styles for the app */
+body {
+  font-family: 'Cursive', sans-serif;  /* Matching the app's aesthetic */
+  color: #000;                         /* Default text color */
+  background-color: #d0c7f2;           /* Light lavender background for consistency */
+  line-height: 1.6;                    /* Ensure readability */
+  -webkit-font-smoothing: antialiased; /* Better font rendering for macOS */
+  -moz-osx-font-smoothing: grayscale;  /* Smooth font rendering for Windows */
+  overflow-x: hidden;                  /* Prevent unwanted horizontal scrolling */
+}
+
+/* Headings styles */
+h1, h2, h3, h4, h5, h6 {
+  color: #4a4a4a;                       /* Darker tone for headings */
+  font-weight: bold;
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+  color: #555;                          /* Muted text for paragraphs */
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  font-family: inherit;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #333;
+  transform: scale(1.02);
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s, background-color 0.3s;
+  outline: none;
+  color: #333;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #000;
+  background-color: #f5f5f5;
+}
+
+/* Links */
+a:hover {
+  color: #4a4a4a;
+  text-decoration: underline;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+  color: #000;
+  border-top: 1px solid #ccc;
+  background-color: #f0f0f0;
+}
+
+footer a {
+  color: #000;
+}
+
+footer a:hover {
+  color: #4a4a4a;
+  text-decoration: underline;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9a8cd8; /* Accent color */
+  border-radius: 10px;
+}
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}

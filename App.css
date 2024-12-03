@@ -1,0 +1,214 @@
+/* CSS Variables for Theme */
+:root {
+  --primary-color: #000; /* Primary color for text and buttons */
+  --secondary-color: #9a8cd8; /* Accent color for hover and highlights */
+  --background-color: #f0e6ff; /* Light lavender for background */
+  --text-color: #333; /* Default text color */
+  --muted-color: #555; /* Muted text color for secondary content */
+  --link-hover-color: #4a4a4a; /* Hover color for links */
+  --input-border-color: #ccc; /* Input border */
+  --focus-border-color: #9a8cd8; /* Input focus border */
+  --font-family: 'Cursive', sans-serif; /* Font family */
+  --border-radius: 8px; /* Consistent border radius */
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Default shadow */
+}
+
+/* Reset and Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.content {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  color: var(--muted-color);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Link Styles */
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Button Styles */
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--border-radius);
+  width: 100%;
+  margin-bottom: 10px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--focus-border-color);
+  box-shadow: var(--shadow);
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  box-shadow: var(--shadow);
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar-item a {
+  color: #fff;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-item a:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.navbar-login-button {
+  background-color: #fff;
+  color: var(--primary-color);
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-login-button:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 1px solid var(--input-border-color);
+  color: var(--text-color);
+}
+
+footer a {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .navbar-logo {
+    font-size: 20px;
+  }
+}
